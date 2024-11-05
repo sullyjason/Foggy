@@ -1,30 +1,5 @@
----
-share_link: https://share.note.sx/gw4wk84u#T3JHbG1VD2B9pG1GhkQVw2mwNuyCgZ+m3TXGdpM+FB0
-share_updated: 2024-10-06T22:43:08+02:00
----
-![[IMG 0616 removebg preview.png]]
-Studio 1 - Photolipsia
 6 Oct 2024
 Silvan Roth
-
-
-## Contents
-
-- [[#Introduction|Introduction]]
-	- [[#Introduction#Idea|Idea]]
-	- [[#Introduction#Inspiration|Inspiration]]
-- [[#Process|Process]]
-- [[#Final Implementation|Final Implementation]]
-	- [[#Final Implementation#Videos|Videos]]
-	- [[#Final Implementation#FFMPEG Shell script|FFMPEG Shell script]]
-	- [[#Final Implementation#Python script|Python script]]
-	- [[#Final Implementation#Hardware|Hardware]]
-	- [[#Final Implementation#Light diffusers|Light diffusers]]
-	- [[#Final Implementation#Enclosure|Enclosure]]
-	- [[#Final Implementation#Final product|Final product]]
-- [[#Reflection|Reflection]]
-	- [[#Reflection#Limitations and improvements|Limitations and improvements]]
-	- [[#Reflection#Concept|Concept]]
 
 
 ## Introduction
@@ -35,9 +10,6 @@ The aim of Studio 1 was to explore the concept of "Photolipsia", defined as the 
 Over the course of the first few theory inputs I often contemplated the concept of "Resolution". I thought it was interesting that we are converging on this near-perfect resolution representation of both 2D and 3D objects but wanted to question to what extent this is needed. I wanted to investigate whether very low-resolution visuals could have similarly powerful subconscious effects as higher resolution visuals, thus exploring whether the visual resolution was really a relevant factor in convincing us that something is "real".
 
 The idea was to create a "portal to another place via a pixelated camera" (see sketch below), not meant to provide the user with accurate data but simply conveying a vague impression of the other place. If there are people moving on the other side, the idea was to let the user feel this presence, possibly even alleviating feelings of loneliness (even if subconscious).
-
-### Inspiration
-I was inspired by artists such as Jim Campell (middle) and design studios such as (now closed) designaffairs (middle bottom). I thought about how we diffuse "real" light, such as with frosted or patterned glass and blinds. These filters intentionally spread light and blur our perception of what's behind them, but for some reason it is still very apparent to us that what's behind them is real. Why is that?![[Pasted image 20241005183349.png]]
 
 ## Process
 Due to the limited amount of time I intended to use supplies I already had for prototyping. 
