@@ -25,7 +25,7 @@ The hardware currently consists of a 8x8 WS2811 LED Matrix connected to a Raspbe
 
 <img src="/images/hardwareprototyping.png" width="60%"/>
 
-<img src="/images/enclosure" width="60%"/>
+<img src="/images/enclosure.png" width="60%"/>
 
 <img src="/images/diffuserlevels.png" width="60%"/>
 
