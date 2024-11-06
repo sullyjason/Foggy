@@ -19,15 +19,15 @@ I used the following process to display videos on the 8x8 LED Matrix:
 
 ### Hardware
 
-<img src="/images/hardwareblocks.png" width="80%"/>
+<img src="/images/hardwareblocks.png" width="100%"/>
 
 The hardware currently consists of a 8x8 WS2811 LED Matrix connected to a Raspberry Pi 3 via the GPIO 18 and GND pins, powered by 5V from a USB-C power delivery board (allowing it to draw as much current as it might need) and using a level shifter breakout board to convert the Raspberry Pi's 3.3V logic to the 5V logic required by the Neopixels. I developed on the Raspberry Pi in a headless setup using VNC viewer, connected via ethernet. The enclosure is 3D printed PLA. The diffusion lenses are sand blasted laser cut acrylic rectangles.
 
-<img src="/images/hardwareprototyping.png" width="80%"/>
+<img src="/images/hardwareprototyping.png" width="100%"/>
 
-<img src="/images/enclosure.png" width="80%"/>
+<img src="/images/enclosure.png" width="100%"/>
 
-<img src="/images/diffuserlevels.png" width="80%"/>
+<img src="/images/diffuserlevels.png" width="100%"/>
 
 ## Limitations and improvements
 
