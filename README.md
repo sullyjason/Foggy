@@ -34,8 +34,6 @@ The hardware currently consists of a 8x8 WS2811 LED Matrix connected to a Raspbe
 <img src="/images/final.png" width="80%"/>
 
 The current version is limited in a few ways that, in a next version, could be improved as follows:
-- Memory of the Raspberry Pi - Use a newer Raspberry Pi or optimize code to pre-load all the image data more efficiently.
+- Memory of the Raspberry Pi - Use a newer Raspberry Pi or optimize code to pre-load all the image data more efficiently. Consider using bitmaps rather than PNGs.
 - Speed of the LED panel - Maybe the WS2811 LEDs that I have used are not the ideal choice.
 - Color accuracy and contrast - implement gamma correction and color correction filters.
-- Frequent glitching - I do not currently know the exact source of this, but half of the display occasionally malfunctions/acts erratically. A potential cause might be poor connections (I have been using dupont connectors), the quality of the LED matrix, signal noise caused by the level shifter, or 
-- Running the script manually in VNC viewer (virtual desktop), which required exact file paths, multiple command line commands, and caused frustration/cost time as the viewer crashed or could not connect to the pi - Improve by writing a script to auto-run the python program on startup, no virtual desktop viewer needed.
