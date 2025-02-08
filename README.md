@@ -69,8 +69,7 @@ sudo reboot
 ```
 
 
-<img src="/images/Finalinsert.jpeg" width="49.65%"/>
-<img src="/images/FinalFull.png" width="49%"/>
+<img src="/images/FinalInsert.jpeg" width="49.65%"/> <img src="/images/FinalFull.png" width="49%"/>
 
 
 
