@@ -3,7 +3,7 @@ Silvan Roth
 
 # Foggy
 
-<img src=" images/FinalWide.jpeg" width="100%"/>
+<img src="/images/FinalWide.jpeg" width="100%"/>
 
 
 Foggy_ is a project that explores the rendering of an impressionistic visual of another place or scene through primitive technology. 
@@ -13,7 +13,7 @@ The idea was to create a "portal to another place via a pixelated camera stream"
 ## Implementation
 I used the following process to display videos on the 8x8 LED Matrix:
 
-<img src=" images/software.png" width="100%"/>
+<img src="/images/software.png" width="100%"/>
 
 ### Software
 
@@ -22,19 +22,19 @@ I used the following process to display videos on the 8x8 LED Matrix:
 
 ### Hardware
 
-<img src="images/wiringfull.png" width="100%"/>
+<img src="/images/wiringfull.png" width="100%"/>
 
 
 The hardware currently consists of an 8x8 WS2811 LED Matrix connected to a Raspberry Pi 3 via the GPIO 18 and GND pins, both powered by a 5V USB-C power delivery board. The LEDs and Raspberry Pi can respectively consume up to 1.2A at peak load, so the entire setup requires 
  and using a level shifter breakout board to convert the Raspberry Pi's 3.3V logic to the 5V logic required by the Neopixels. I developed on the Raspberry Pi in a headless setup using VNC viewer, connected via ethernet. The enclosure is 3D printed PLA. The diffusion lenses are sand blasted laser cut acrylic rectangles.
 
-<img src=" images/hardwareprototyping.png" width="100%"/>
+<img src="/images/hardwareprototyping.png" width="100%"/>
 
 
 
-<img src=" images/diffuserlevels.png" width="100%"/>
+<img src="/images/diffuserlevels.png" width="100%"/>
 
-<img src=" images/enclosure.png" width="100%"/>
+<img src="/images/enclosure.png" width="100%"/>
 
 ### Final presentation
 
@@ -69,8 +69,8 @@ sudo reboot
 ```
 
 
-<img src=" images/Finalinsert.jpeg" width="49.65%"/>
-<img src=" images/FinalFull.png" width="49%"/>
+<img src="/images/Finalinsert.jpeg" width="49.65%"/>
+<img src="/images/FinalFull.png" width="49%"/>
 
 
 
