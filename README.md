@@ -1,16 +1,19 @@
 6 Oct 2024
 Silvan Roth
 
+# Foggy
 
-## Aim
-_Foggy_ is a project that explores the rendering of an impressionistic visual of another place through very primitive technology. 
+<img src=" images/FinalWide.jpeg" width="100%"/>
+
+
+Foggy_ is a project that explores the rendering of an impressionistic visual of another place or scene through primitive technology. 
 
 The idea was to create a "portal to another place via a pixelated camera stream", not meant to provide the user with accurate data but simply conveying a vague impression of the other place. If there are people moving on the other side, the idea was to let the user feel this presence, possibly even alleviating feelings of loneliness (even if subconscious).
 
 ## Implementation
 I used the following process to display videos on the 8x8 LED Matrix:
 
-<img src="/images/software.png" width="100%"/>
+<img src=" images/software.png" width="100%"/>
 
 ### Software
 
@@ -19,23 +22,63 @@ I used the following process to display videos on the 8x8 LED Matrix:
 
 ### Hardware
 
-<img src="/images/hardwareblocks.png" width="100%"/>
+<img src="images/wiringfull.png" width="100%"/>
 
-The hardware currently consists of a 8x8 WS2811 LED Matrix connected to a Raspberry Pi 3 via the GPIO 18 and GND pins, powered by 5V from a USB-C power delivery board (allowing it to draw as much current as it might need) and using a level shifter breakout board to convert the Raspberry Pi's 3.3V logic to the 5V logic required by the Neopixels. I developed on the Raspberry Pi in a headless setup using VNC viewer, connected via ethernet. The enclosure is 3D printed PLA. The diffusion lenses are sand blasted laser cut acrylic rectangles.
 
-<img src="/images/hardwareprototyping.png" width="100%"/>
+The hardware currently consists of an 8x8 WS2811 LED Matrix connected to a Raspberry Pi 3 via the GPIO 18 and GND pins, both powered by a 5V USB-C power delivery board. The LEDs and Raspberry Pi can respectively consume up to 1.2A at peak load, so the entire setup requires 
+ and using a level shifter breakout board to convert the Raspberry Pi's 3.3V logic to the 5V logic required by the Neopixels. I developed on the Raspberry Pi in a headless setup using VNC viewer, connected via ethernet. The enclosure is 3D printed PLA. The diffusion lenses are sand blasted laser cut acrylic rectangles.
 
-<img src="/images/enclosure.png" width="100%"/>
+<img src=" images/hardwareprototyping.png" width="100%"/>
 
-<img src="/images/diffuserlevels.png" width="100%"/>
+
+
+<img src=" images/diffuserlevels.png" width="100%"/>
+
+<img src=" images/enclosure.png" width="100%"/>
+
+### Final presentation
+
+To present hardware effectively, a systemd service file can automatically play the LED animation on startup:
+
+```
+sudo nano /etc/systemd/system/ledcontrol.service
+```
+```
+[Unit]
+Description=LED Control Script
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/NeopixelAnimateAll.py # <-- The script to execute
+WorkingDirectory=/home/pi
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
+```
+Enable the ledcontrol.service and reboot to verify that it works
+```
+sudo systemctl enable ledcontrol.service
+sudo systemctl start ledcontrol.service
+sudo reboot
+```
+
+
+<img src=" images/Finalinsert.jpeg" width="49.65%"/>
+<img src=" images/FinalFull.png" width="49%"/>
+
+
+
+
 
 ## Limitations and improvements
 
-<img src="/images/final.png" width="80%"/>
-
 The current version is limited in a few ways that, in a next version, could be improved as follows:
-- Memory of the Raspberry Pi - Use a newer Raspberry Pi or optimize code to pre-load all the image data more efficiently.
-- Speed of the LED panel - Maybe the WS2811 LEDs that I have used are not the ideal choice.
+- Memory of the Raspberry Pi - Use a newer Raspberry Pi or optimize code to pre-load all the image data more efficiently. Consider converting to BMP instead of PNG for more efficient rendering.
 - Color accuracy and contrast - implement gamma correction and color correction filters.
-- Frequent glitching - I do not currently know the exact source of this, but half of the display occasionally malfunctions/acts erratically. A potential cause might be poor connections (I have been using dupont connectors), the quality of the LED matrix, signal noise caused by the level shifter, or 
-- Running the script manually in VNC viewer (virtual desktop), which required exact file paths, multiple command line commands, and caused frustration/cost time as the viewer crashed or could not connect to the pi - Improve by writing a script to auto-run the python program on startup, no virtual desktop viewer needed.
+- Occasional glitching - Possibly due to fluctuations in current, LED matrix acts erratically sometimes. Other potential causes might be poor connections (I have been using dupont connectors), the quality of the LED matrix, signal noise caused by the level shifter. Using a high quality power brick and cable helps.
